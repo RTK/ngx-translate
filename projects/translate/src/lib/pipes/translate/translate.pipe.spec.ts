@@ -22,7 +22,7 @@ describe('TranslatePipe', (): void => {
     beforeEach((): void => {
         translatePipe = new TranslatePipe(
             changeDetectorRef as ChangeDetectorRef,
-            translateService as unknown as TranslateService,
+            (translateService as unknown) as TranslateService,
             translateSet
         );
     });
@@ -39,7 +39,7 @@ describe('TranslatePipe', (): void => {
         expect((): TranslatePipe | never => {
             return new TranslatePipe(
                 changeDetectorRef as ChangeDetectorRef,
-                translateService as unknown as TranslateService,
+                (translateService as unknown) as TranslateService,
                 void 0 as any
             );
         }).toThrow();

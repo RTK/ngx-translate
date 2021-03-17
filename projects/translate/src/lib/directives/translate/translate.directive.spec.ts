@@ -24,7 +24,7 @@ describe('TranslateDirective', (): void => {
     beforeEach((): void => {
         translateDirective = new TranslateDirective(
             elementRef as ElementRef,
-            translateService as unknown as TranslateService,
+            (translateService as unknown) as TranslateService,
             translationSetFactory
         );
     });
@@ -37,7 +37,7 @@ describe('TranslateDirective', (): void => {
         expect((): TranslateDirective | never => {
             return new TranslateDirective(
                 elementRef as ElementRef,
-                translateService as unknown as TranslateService,
+                (translateService as unknown) as TranslateService,
                 void 0 as any
             );
         }).toThrow();
