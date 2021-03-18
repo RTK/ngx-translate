@@ -1,5 +1,8 @@
-# Translate
+![GitHub](https://img.shields.io/github/license/RTK/ngx-translate?style=flat-square)
+![Travis (.com) branch](https://img.shields.io/travis/com/RTK/ngx-translate/master?style=flat-square)
+![Codecov](https://img.shields.io/codecov/c/gh/RTK/ngx-translate?style=flat-square)
 
+# Translate
 -   [About](#about)
 -   [Prerequisites](#prerequisites)
 -   [Installation](#installation)
