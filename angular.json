@@ -25,6 +25,11 @@
                     "builder": "@angular-builders/jest:run",
                     "options": {
                         "tsConfig": "tsconfig.spec.json"
+                    },
+                    "configurations": {
+                        "ci": {
+                            "coverage": true
+                        }
                     }
                 },
                 "lint": {
