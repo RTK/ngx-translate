@@ -1,6 +1,6 @@
 {
     "hooks": {
-        "pre-commit": "ng lint && prettier --write .",
-        "pre-push": "prettier --check ."
+        "pre-commit": "ng lint && prettier --write projects/",
+        "pre-push": "prettier --check projects/"
     }
 }
