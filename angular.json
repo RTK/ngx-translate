@@ -63,8 +63,7 @@
                         "aot": true,
                         "styles": [
                             "projects/demo-translate/src/styles.css"
-                        ],
-                        "scripts": []
+                        ]
                     }
                 },
                 "serve": {
