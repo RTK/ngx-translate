@@ -10,7 +10,7 @@ script:
 - codecov -f coverage/*.json
 before_deploy:
     - npm run build
-    - cd dist/translate
+    - cd ./dist/translate
 deploy:
   provider: npm
   email: rouvenkruse@web.de
@@ -19,4 +19,4 @@ deploy:
   on:
     tags: true
     repo: RTK/ngx-translate
-  cleanup: 'true'
+  cleanup: true
