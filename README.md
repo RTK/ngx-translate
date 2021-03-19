@@ -234,5 +234,5 @@ translateService.getTranslation(
 );
 
 // get language changes -> Hot observable
-translateService.translationChange$.subscribe();
+translateService.languageChange$.subscribe();
 ```
