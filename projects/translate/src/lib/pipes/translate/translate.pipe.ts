@@ -14,7 +14,7 @@ import {TranslationSetFactory} from '../../types/translation-set-factory.type';
  * Is marked as impure since its return value will be retrieved dynamically.
  */
 @Pipe({
-    name: 'rweAppFactoryTranslate',
+    name: 'rtkTranslate',
     pure: false
 })
 export class TranslatePipe implements PipeTransform, OnDestroy {

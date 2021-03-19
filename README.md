@@ -15,12 +15,18 @@ in place like [Angular's i18n](https://angular.io/guide/i18n) or community drive
 [ngx-translate](https://github.com/ngx-translate/core) those solutions lack in flexibility.
 
 With this library you can overwrite your translations on each level. For example you can provide one huge
-translation set for your whole application, one translation set per module you work with or even per component.
+translation set for your whole application, one translation set per module you work with or even per component. You can load translations from static
+JSON assets, put them into your component's source code, lazy load them with webpack/ES6 import, load them via HTTP, retrieve whem via WebSocket, and more
+crazy methods you might come up with.
 
 There is no limitation on how detailed your translation handling is restricted with this library.
 
 Furthermore this library supports any kind of translation distribution. You can provide your translation sets statically or
 dynamically.
+
+This library is aimed towards mobile application development and does not help if topics like SEO are your concern. Further the
+application's performance might decrease with this solution compared to e.g. Angular's localize package since translations are inserted at runtime and might
+be evaluated more than once during ther lifecycle.
 
 ## <a id="prerequisites"></a> Prerequisites
 
@@ -178,15 +184,14 @@ translateService.getTranslation({
     test: 'My string %d %s'
 }, 'test', [1337, 'is nice'])
 
-// --> My string 10 is nice
+// --> My string 1337 is nice
 ```
 
 ### Contents
 
 #### Directive
 
-The `TranslateDirective` can be used either via element-syntax- or attribute-syntax. Either of those
-forms are valid:
+The `TranslateDirective` can be used either via element-syntax- or attribute-syntax. Both of the following formats are valid:
 
 ```html
 <rtk-translate key="title"></rtk-translate>
@@ -200,8 +205,8 @@ Optional Inputs: `arguments` (any value or Array of values of any type)
 
 #### Pipe
 
-The `TranslatePipe` is a non pure pipe which will update its contents at runtime each time either the
-selected language has been changed or any argument has been changed.
+The `TranslatePipe` is a non pure pipe which will update its contents at runtime each time the
+selected language or any argument has been changed.
 
 ```html
 <input placeholder="'placeholder' | rtkTranslate: 'argument1' : true : 123" />
@@ -227,4 +232,7 @@ translateService.getTranslation(
     'title',
     [10]
 );
+
+// get language changes -> Hot observable
+translateService.translationChange$.subscribe();
 ```
