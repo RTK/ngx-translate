@@ -19,4 +19,4 @@ deploy:
   on:
     tags: true
     repo: RTK/ngx-translate
-  cleanup: true
+  cleanup: false
