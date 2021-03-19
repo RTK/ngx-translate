@@ -7,7 +7,6 @@
         "lint": "ng lint",
         "e2e": "ng e2e"
     },
-    "private": true,
     "dependencies": {
         "@angular/common": "~11.2.5",
         "@angular/compiler": "~11.2.5",
