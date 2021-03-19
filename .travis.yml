@@ -17,7 +17,7 @@ before_deploy:
 deploy:
     provider: npm
     email: rouvenkruse@web.de
-    api_token:
+    api_key:
         secure: VPQCkjt6IUfqX1c1bwaewgMcVvs5kxjQEOC2PsDeHM/Zm7sB0hR6LQjZol0xPkNHUNeyDnlYK+ilXBwCjPgu6AnT6x+yrrLhXkGq6v81Dzl4RLNjd8NbP0YcSD877ZwYIRatgdo734lgY8K9ftImmCodX2b4cwEBzVpKwNarAvUzuMa1UsFFI1KkN5sbJpaRuwabD8o+sVm3oUufGlR57VByT3BnJgNUclM6i0bDQpzkz6u6OiU4DN8txJ0+eZyMFFGfKJ923ROdMQ8PnN4wmN277VgNG8PuOSTJ/PeZnKulSum+Nqn+nKxuXVbTp6wdQAtElLxCTpzcSjp7kyh0ZNmjZaoh4Zn2kn3C6HCuBeL3OjtyCbEZtYODMrRpkMII4bdRq0+S188EzpSMPKsCBPEp1aETGCfecwPkCU84diqHPEvdSDqn4fXjZZ38Uy+mBR2zR8yV+qvwf0JZoV/Y9V4Q1OkbHE1rw9+s8yAWRJxvWWxPwOgMk7Co+cI2CQZDXSe0SP57ghX2M+HAOAfAuxdFZFutsLvLv9kBSKjP8omY9IeKUsSn9yUPSssFEv5Cut1fnrXLAflVKWImVoSrM7Z+JEHtU7KDVX5MPcJhgTObGlefDpfXP9IkEX1+Fg3C6HePtlBACguvb5zvKZJ0nx/S9ZBEnQ8zZaGtIEU7D+E=
     on:
         tags: true
