@@ -44,6 +44,36 @@
                     }
                 }
             }
+        },
+        "demo-translate": {
+            "projectType": "application",
+            "schematics": {},
+            "root": "projects/demo-translate",
+            "sourceRoot": "projects/demo-translate/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/demo-translate",
+                        "index": "projects/demo-translate/src/index.html",
+                        "main": "projects/demo-translate/src/main.ts",
+                        "polyfills": "projects/demo-translate/src/polyfills.ts",
+                        "tsConfig": "projects/demo-translate/tsconfig.app.json",
+                        "aot": true,
+                        "styles": [
+                            "projects/demo-translate/src/styles.css"
+                        ],
+                        "scripts": []
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "demo-translate:build"
+                    }
+                }
+            }
         }
     },
     "defaultProject": "translate"

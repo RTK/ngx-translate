@@ -1,0 +1,10 @@
+<ng-content></ng-content>
+
+<h2>
+    <span>{{ 'title' | rtkTranslate }}</span>
+</h2>
+<h3 rtkTranslate key="sub.title"></h3>
+
+<button (click)="onChangeLang('en')">EN</button>
+<button  (click)="onChangeLang('es')">ES</button>
+<button  (click)="onChangeLang('de')">DE</button>
